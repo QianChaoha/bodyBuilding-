@@ -4,103 +4,116 @@
     android:layout_height="match_parent"
     android:background="@drawable/background_0"
     android:orientation="vertical"
-    tools:context="${relativePackage}.${activityClass}">
+    tools:context="${relativePackage}.${activityClass}" >
 
-    <RelativeLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="6">
-
-        <View
-            android:id="@+id/middle"
-            android:layout_width="1px"
-            android:layout_height="match_parent"
-            android:layout_centerHorizontal="true"
-            android:background="#ff0000" />
-
-        <ImageView
-            android:id="@+id/ivQuickStart"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/main_quick_start_selector" />
+        android:layout_weight="8" >
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="75dp"
-            android:layout_marginLeft="75dp"
-            android:layout_toRightOf="@id/middle">
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:layout_gravity="center" >
 
-            <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+            <View
+                android:id="@+id/middle"
+                android:layout_width="1px"
+                android:layout_height="100px"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/main_fs_button_selector" />
-        </RelativeLayout>
-
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_marginBottom="140dp"
-            android:layout_marginLeft="40dp"
-            android:layout_toRightOf="@id/middle">
+                android:background="#ff0000" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:id="@+id/ivQuickStart"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/main_5_back_button_selector" />
-        </RelativeLayout>
+                android:background="@drawable/main_quick_start_selector"
+                android:clickable="true" />
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_above="@id/ivQuickStart"
-            android:layout_centerHorizontal="true">
-
-            <ImageView
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/main_5_front_button_selector" />
-        </RelativeLayout>
+                android:layout_marginBottom="75dp"
+                android:layout_marginLeft="75dp"
+                android:layout_toRightOf="@id/middle" >
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="140dp"
-            android:layout_marginRight="40dp"
-            android:layout_toLeftOf="@id/middle">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/main_fs_button_selector"
+                    android:clickable="true" />
+            </RelativeLayout>
 
-            <ImageView
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/main_12_button_selector" />
-        </RelativeLayout>
+                android:layout_marginBottom="140dp"
+                android:layout_marginLeft="40dp"
+                android:layout_toRightOf="@id/middle" >
 
-        <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="75dp"
-            android:layout_marginRight="75dp"
-            android:layout_toLeftOf="@id/middle">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/main_5_back_button_selector"
+                    android:clickable="true" />
+            </RelativeLayout>
 
-            <ImageView
+            <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                android:background="@drawable/main_cw_button_selector" />
+                android:layout_above="@id/ivQuickStart"
+                android:layout_centerHorizontal="true" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/main_5_front_button_selector"
+                    android:clickable="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="140dp"
+                android:layout_marginRight="40dp"
+                android:layout_toLeftOf="@id/middle" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/main_12_button_selector"
+                    android:clickable="true" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="75dp"
+                android:layout_marginRight="75dp"
+                android:layout_toLeftOf="@id/middle" >
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/main_cw_button_selector"
+                    android:clickable="true" />
+            </RelativeLayout>
         </RelativeLayout>
-    </RelativeLayout>
+    </FrameLayout>
 
     <TextView
         android:id="@+id/tvWelcome"
@@ -109,99 +122,78 @@
         android:layout_weight="1"
         android:gravity="center_horizontal"
         android:text="welcome"
-        android:textColor="#ff0000" />
+        android:textColor="#ff0000"
+        android:textSize="@dimen/text_26" />
 
     <TextView
         android:id="@+id/tvSelectText"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.5"
         android:gravity="center_horizontal"
         android:text="aaaaaaaaa"
-        android:textColor="@android:color/white" />
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/text_26" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"></LinearLayout>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_weight="0.5"
+        android:orientation="horizontal" >
+    </LinearLayout>
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/llBottom"
+        android:layout_width="wrap_content"
         android:layout_height="0dp"
+        android:layout_gravity="center_horizontal"
         android:layout_weight="1"
-        android:gravity="center_horizontal"
-        android:orientation="vertical">
+        android:orientation="horizontal" >
 
+        <RelativeLayout style="@style/main_rl_borrom" >
 
-        <LinearLayout
-            android:id="@+id/llBottom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <LinearLayout style="@style/main_rb"
-
-                >
+            <LinearLayout style="@style/main_ll_borrom" >
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
+                    style="@style/main_iv_bottom"
                     android:background="@drawable/video_icon_123" />
 
                 <TextView
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:singleLine="true"
-                    android:text="Getting Started"
-                    android:textSize="12sp" />
+                    style="@style/main_tv_bottom"
+                    android:text="Getting Started" />
             </LinearLayout>
+        </RelativeLayout>
 
-            <LinearLayout style="@style/main_rb"
+        <RelativeLayout style="@style/main_rl_borrom" >
 
-                >
+            <LinearLayout style="@style/main_ll_borrom" >
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
+                    style="@style/main_iv_bottom"
                     android:background="@drawable/video_icon_123" />
 
                 <TextView
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:singleLine="true"
-                    android:text="English"
-                    android:textSize="12sp" />
+                    style="@style/main_tv_bottom"
+                    android:text="English" />
             </LinearLayout>
+        </RelativeLayout>
 
-            <LinearLayout style="@style/main_rb"
+        <RelativeLayout style="@style/main_rl_borrom" >
 
-                >
+            <LinearLayout style="@style/main_ll_borrom" >
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
+                    style="@style/main_iv_bottom"
                     android:background="@drawable/english_flag_116" />
 
                 <TextView
-                    android:layout_width="80dp"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:singleLine="true"
-                    android:text="Rotary Motion"
-                    android:textSize="12sp" />
+                    style="@style/main_tv_bottom"
+                    android:text="Rotary Motion" />
             </LinearLayout>
-
-        </LinearLayout>
-
+        </RelativeLayout>
     </LinearLayout>
-
 
 </LinearLayout>

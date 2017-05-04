@@ -1,32 +1,32 @@
 package com.example.bodybuilding;
 
-import android.app.Activity;
-import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.v4.view.ViewPager;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 
-import com.example.bodybuilding.adapter.MainViewPagerAdapter;
 import com.example.bodybuilding.base.BaseActivity;
 import com.example.bodybuilding.util.ScreenUtil;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends BaseActivity {
     private LinearLayout mLinearLayout;
     private int mCurrentItem = 0;
     private int mWhat = 0;
     private int mTotal = 5;
+    private TextView mTvSelectText;
+    private String[] selectTextArr=new String[]{
+    		"Select a workout or touch \"Quick Start\" to begin.",
+    		"Touch the i icon for complete workout descriptions.",
+    		"Ensure the bike is in the correct position and the Rotary Motion lever is locked down.",
+    		"Read and understand all safely information before starting workout.",
+    		"Visit www.avantifitness.com for additional workouts and exercise tips "
+    };
     private Handler mHandle = new Handler() {
         @Override
         public void handleMessage(Message msg) {
+        	mTvSelectText.setText(selectTextArr[mCurrentItem]);
             mCurrentItem++;
             mCurrentItem = mCurrentItem%mTotal;
 
@@ -48,6 +48,7 @@ public class MainActivity extends BaseActivity {
     @Override
     protected void initView() {
         mLinearLayout = getView(R.id.linearLayout);
+        mTvSelectText = getView(R.id.tvSelectText);
         initList();
         mHandle.sendEmptyMessageAtTime(mWhat, 3000);
     }
@@ -55,14 +56,13 @@ public class MainActivity extends BaseActivity {
     private void initList() {
         mLinearLayout.removeAllViews();
         for (int i = 0; i < 5; i++) {
-//            View view = View.inflate(mContext,R.layout.main_pager_item,null);
             ImageView imageView= new ImageView(mContext);
             if (i == 0) {
                 imageView.setBackgroundResource(R.drawable.grey_stage_1_64);
             } else {
                 imageView.setBackgroundResource(R.drawable.black_stage_1_56);
             }
-            LinearLayout.LayoutParams layoutParams=new LinearLayout.LayoutParams(ScreenUtil.dip2px(mContext,50), ScreenUtil.dip2px(mContext,50));
+            LinearLayout.LayoutParams layoutParams=new LinearLayout.LayoutParams(ScreenUtil.dip2px(mContext, 10), ScreenUtil.dip2px(mContext, 10));
             mLinearLayout.addView(imageView,layoutParams);
         }
 
