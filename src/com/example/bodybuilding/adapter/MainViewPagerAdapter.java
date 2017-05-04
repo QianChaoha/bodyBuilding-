@@ -7,6 +7,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+import com.example.bodybuilding.util.ScreenUtil;
+
 import java.util.List;
 
 /**
@@ -39,6 +41,7 @@ public class MainViewPagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         ViewPager viewPager= (ViewPager) container;
         ImageView imageView=mList.get(position);
+//        ViewGroup.LayoutParams layoutParams=new ViewGroup.LayoutParams(ScreenUtil.dip2px(mContext,30),ScreenUtil.dip2px(mContext,30));
         viewPager.addView(imageView);
         return imageView;
     }
