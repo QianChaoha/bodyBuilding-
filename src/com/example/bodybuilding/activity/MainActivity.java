@@ -1,4 +1,4 @@
-package com.example.bodybuilding;
+package com.example.bodybuilding.activity;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -11,10 +11,13 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.example.bodybuilding.R;
 import com.example.bodybuilding.base.BaseActivity;
+import com.example.bodybuilding.interfaces.DialogCallback;
 import com.example.bodybuilding.util.ScreenUtil;
+import com.example.bodybuilding.view.CommenDialog;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity implements View.OnClickListener {
     private LinearLayout mLinearLayout;
     private int mCurrentItem = 0;
     private int mWhat = 0;
@@ -31,8 +34,12 @@ public class MainActivity extends BaseActivity {
     private boolean mIsFirst = true;
     private RelativeLayout mRl1, mRl2, mRl3, mRl4, mRl5;
     private RelativeLayout[] mRls = new RelativeLayout[5];
-    private int[] mRlX = new int[5];
-    private int[] mRlY = new int[5];
+    private ImageView iv11,iv22,iv33,iv44,iv55;
+    private int[] mInfoImgsCw=new int[]{R.drawable.back_ext_img_32,R.drawable.biceps_curl_img_31,R.drawable.triceps_kb_img_30,
+            R.drawable.shoulder_hl_img_29,R.drawable.seated_row_img_28,R.drawable.back_ext_img_32,R.drawable.chest_press_img_25,
+            R.drawable.pec_fly_img_24,R.drawable.triceps_ext_img_23,R.drawable.pullover_img_22,R.drawable.ab_crunch_img_21,
+            R.drawable.black_img_45};
+    private int[] mInfoImgs12r=new int[]{R.drawable.left_img_43,R.drawable.black_img_45,R.drawable.right_img_44};
     private Handler mHandle = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -59,6 +66,16 @@ public class MainActivity extends BaseActivity {
     protected void initView() {
         mLinearLayout = getView(R.id.linearLayout);
         mTvSelectText = getView(R.id.tvSelectText);
+        iv11=getView(R.id.iv11);
+        iv11.setOnClickListener(this);
+        iv22=getView(R.id.iv22);
+        iv22.setOnClickListener(this);
+        iv33=getView(R.id.iv33);
+        iv33.setOnClickListener(this);
+        iv44=getView(R.id.iv44);
+        iv44.setOnClickListener(this);
+        iv55=getView(R.id.iv55);
+        iv55.setOnClickListener(this);
         mRl1 = getView(R.id.rl1);
         mRl2 = getView(R.id.rl2);
         mRl3 = getView(R.id.rl3);
@@ -117,8 +134,8 @@ public class MainActivity extends BaseActivity {
             animSet.setDuration(DURATION);
             animSet.start();
 
-            ObjectAnimator moveX1 =ObjectAnimator.ofFloat(mRls[1], "translationX", -100, 0);
-            ObjectAnimator moveY1 = ObjectAnimator.ofFloat(mRls[1], "translationY", -500, 0);
+            ObjectAnimator moveX1 =ObjectAnimator.ofFloat(mRls[1], "translationX", -200, 0);
+            ObjectAnimator moveY1 = ObjectAnimator.ofFloat(mRls[1], "translationY", -400, 0);
             AnimatorSet animSet1 = new AnimatorSet();
             animSet1.play(moveX1).with(moveY1);
             animSet1.setDuration(DURATION);
@@ -130,8 +147,8 @@ public class MainActivity extends BaseActivity {
             animSet2.setDuration(DURATION);
             animSet2.start();
 
-            ObjectAnimator moveX3 = ObjectAnimator.ofFloat(mRls[3], "translationX", -100, 0);
-            ObjectAnimator moveY3 = ObjectAnimator.ofFloat(mRls[3], "translationY", -500, 0);
+            ObjectAnimator moveX3 = ObjectAnimator.ofFloat(mRls[3], "translationX", 200, 0);
+            ObjectAnimator moveY3 = ObjectAnimator.ofFloat(mRls[3], "translationY", -400, 0);
             AnimatorSet animSet3 = new AnimatorSet();
             animSet3.play(moveY3).with(moveX3);
             animSet3.setDuration(DURATION);
@@ -156,6 +173,53 @@ public class MainActivity extends BaseActivity {
         if (mHandle != null) {
             mHandle.removeMessages(mWhat);
             mHandle = null;
+        }
+    }
+
+    @Override
+    public void onClick(View v) {
+        CommenDialog commenDialog;
+        switch (v.getId()){
+            case R.id.iv11:
+                 commenDialog=new CommenDialog(mContext,mInfoImgsCw,6,new DialogCallback() {
+                    @Override
+                    public void click(View view) {
+
+                    }
+                });
+                break;
+            case R.id.iv22:
+                 commenDialog=new CommenDialog(mContext,mInfoImgs12r,3,new DialogCallback() {
+                    @Override
+                    public void click(View view) {
+
+                    }
+                });
+                break;
+            case R.id.iv33:
+                 commenDialog=new CommenDialog(mContext,mInfoImgsCw,6,new DialogCallback() {
+                    @Override
+                    public void click(View view) {
+
+                    }
+                });
+                break;
+            case R.id.iv44:
+                 commenDialog=new CommenDialog(mContext,mInfoImgsCw,6,new DialogCallback() {
+                    @Override
+                    public void click(View view) {
+
+                    }
+                });
+                break;
+            case R.id.iv55:
+                 commenDialog=new CommenDialog(mContext,mInfoImgsCw,6,new DialogCallback() {
+                    @Override
+                    public void click(View view) {
+
+                    }
+                });
+                break;
         }
     }
 }
