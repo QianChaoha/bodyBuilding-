@@ -5,6 +5,7 @@ import android.os.Message;
 import android.view.ViewGroup.LayoutParams;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.bodybuilding.base.BaseActivity;
@@ -23,6 +24,11 @@ public class MainActivity extends BaseActivity {
     		"Read and understand all safely information before starting workout.",
     		"Visit www.avantifitness.com for additional workouts and exercise tips "
     };
+    private boolean mIsFirst=true;
+    private RelativeLayout mRl1,mRl2,mRl3,mRl4,mRl5;
+    private RelativeLayout[] mRls=new RelativeLayout[5];
+    private int[] mRlX=new int[5];
+    private int[] mRlY=new int[5];
     private Handler mHandle = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -49,6 +55,13 @@ public class MainActivity extends BaseActivity {
     protected void initView() {
         mLinearLayout = getView(R.id.linearLayout);
         mTvSelectText = getView(R.id.tvSelectText);
+        mRl1= getView(R.id.rl1);mRl2= getView(R.id.rl2);mRl3= getView(R.id.rl3);
+        mRl4= getView(R.id.rl4);mRl5= getView(R.id.rl5);
+        mRls[0]=mRl1;
+        mRls[1]=mRl2;
+        mRls[2]=mRl3;
+        mRls[3]=mRl4;
+        mRls[4]=mRl5;
         initList();
         mHandle.sendEmptyMessageAtTime(mWhat, 3000);
     }
@@ -77,7 +90,18 @@ public class MainActivity extends BaseActivity {
     protected int getLayoutId() {
         return R.layout.main;
     }
-
+@Override
+public void onWindowFocusChanged(boolean hasFocus) {
+	super.onWindowFocusChanged(hasFocus);
+	if (mIsFirst) {
+		mIsFirst=false;
+		for (int i = 0; i < mRlX.length; i++) {
+			mRlX[i]=(int) mRls[i].getX();
+			mRlY[i]=(int) mRls[i].getY();
+		}
+		
+	}
+}
     @Override
     protected void onDestroy() {
         super.onDestroy();
