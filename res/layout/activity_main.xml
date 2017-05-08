@@ -223,7 +223,9 @@
             </LinearLayout>
         </RelativeLayout>
 
-        <RelativeLayout style="@style/main_rl_borrom">
+        <RelativeLayout
+             android:id="@+id/rlEnglish"
+             style="@style/main_rl_borrom">
 
             <LinearLayout style="@style/main_ll_borrom">
 

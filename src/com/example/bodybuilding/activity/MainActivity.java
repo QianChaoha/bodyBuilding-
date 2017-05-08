@@ -16,6 +16,7 @@ import com.example.bodybuilding.base.BaseActivity;
 import com.example.bodybuilding.interfaces.DialogCallback;
 import com.example.bodybuilding.util.ScreenUtil;
 import com.example.bodybuilding.view.CommenDialog;
+import com.example.bodybuilding.view.LanguageDialog;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
     private LinearLayout mLinearLayout;
@@ -40,6 +41,10 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             R.drawable.pec_fly_img_24,R.drawable.triceps_ext_img_23,R.drawable.pullover_img_22,R.drawable.ab_crunch_img_21,
             R.drawable.black_img_45};
     private int[] mInfoImgs12r=new int[]{R.drawable.left_img_43,R.drawable.black_img_45,R.drawable.right_img_44};
+    private int[] mInfoImgsF5=new int[]{R.drawable.back_ext_img_32,R.drawable.biceps_curl_img_31,R.drawable.triceps_kb_img_30,R.drawable.shoulder_hl_img_29,R.drawable.seated_row_img_28};
+    private int[] mInfoImgsB5=new int[]{R.drawable.chest_press_img_25,R.drawable.pec_fly_img_24,R.drawable.triceps_ext_img_23,R.drawable.pullover_img_22,R.drawable.ab_crunch_img_21};
+    private int[] mInfoImgsFs=new int[]{R.drawable.usb_img_8};
+    private RelativeLayout mRlEnglish;
     private Handler mHandle = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -66,6 +71,8 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     protected void initView() {
         mLinearLayout = getView(R.id.linearLayout);
         mTvSelectText = getView(R.id.tvSelectText);
+        mRlEnglish = getView(R.id.rlEnglish);
+        mRlEnglish.setOnClickListener(this);
         iv11=getView(R.id.iv11);
         iv11.setOnClickListener(this);
         iv22=getView(R.id.iv22);
@@ -197,7 +204,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 });
                 break;
             case R.id.iv33:
-                 commenDialog=new CommenDialog(mContext,mInfoImgsCw,6,new DialogCallback() {
+                 commenDialog=new CommenDialog(mContext,mInfoImgsF5,5,new DialogCallback() {
                     @Override
                     public void click(View view) {
 
@@ -205,7 +212,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 });
                 break;
             case R.id.iv44:
-                 commenDialog=new CommenDialog(mContext,mInfoImgsCw,6,new DialogCallback() {
+                 commenDialog=new CommenDialog(mContext,mInfoImgsB5,6,new DialogCallback() {
                     @Override
                     public void click(View view) {
 
@@ -213,13 +220,22 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
                 });
                 break;
             case R.id.iv55:
-                 commenDialog=new CommenDialog(mContext,mInfoImgsCw,6,new DialogCallback() {
+                 commenDialog=new CommenDialog(mContext,mInfoImgsFs,3,new DialogCallback() {
                     @Override
                     public void click(View view) {
 
                     }
                 });
                 break;
+            case R.id.rlEnglish:
+            	LanguageDialog languageDialog=new LanguageDialog(mContext,  new DialogCallback() {
+					
+					@Override
+					public void click(View view) {
+						
+					}
+				});
+            	break;
         }
     }
 }
