@@ -35,4 +35,7 @@ public abstract class BaseActivity extends Activity{
     protected <T extends View> T getView(int id){
         return (T)findViewById(id);
     }
+    protected <T extends View> T getView(View view,int id){
+    	return (T)view.findViewById(id);
+    }
 }

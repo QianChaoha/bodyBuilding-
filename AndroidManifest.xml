@@ -26,6 +26,8 @@
         </activity>
         <activity android:name="com.example.bodybuilding.activity.CustomWorkoutActivity" >
         </activity>
+        <activity android:name="com.example.bodybuilding.activity.HeartrateActivity" >
+        </activity>
     </application>
 
 </manifest>

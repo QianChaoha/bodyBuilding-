@@ -1,5 +1,6 @@
 package com.example.bodybuilding.activity;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.GridView;
 import android.widget.ImageView;
@@ -15,14 +16,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CustomWorkoutActivity extends BaseActivity implements View.OnClickListener {
-//    private ImageView mIvContinue;
+    private ImageView mIvContinue;
     private GridView mGridView,mGridViewBottom;
     private LinearLayout mLlPoint;
 
     @Override
     protected void initView() {
-//        mIvContinue = getView(R.id.ivContinue);
-//        mIvContinue.setOnClickListener(this);
+        mIvContinue = getView(R.id.ivContinue);
+        mIvContinue.setOnClickListener(this);
         mGridView = getView(R.id.gridView);
         mGridViewBottom = getView(R.id.gridViewBottom);
         mLlPoint = getView(R.id.llPoint);
@@ -66,9 +67,9 @@ public class CustomWorkoutActivity extends BaseActivity implements View.OnClickL
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-//            case R.id.ivContinue:
-//                startActivity();
-//                break;
+            case R.id.ivContinue:
+                startActivity(new Intent(mContext,HeartrateActivity.class));
+                break;
         }
     }
 }
