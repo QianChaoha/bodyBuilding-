@@ -2,22 +2,22 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@android:color/transparent" >
+    android:background="@android:color/transparent">
 
-    <RelativeLayout 
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/background_only"
         android:orientation="vertical"
+        android:paddingBottom="50dp"
         android:paddingLeft="200dp"
         android:paddingRight="200dp"
-        android:paddingTop="50dp"
-        android:paddingBottom="50dp" >
+        android:paddingTop="50dp">
 
         <RelativeLayout
             android:id="@+id/rlHead"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" >
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -25,42 +25,37 @@
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="20dp"
                 android:layout_marginTop="15dp"
-                android:orientation="horizontal" >
+                android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/tvLibs"
+                <ImageView
+                    android:id="@+id/ivLibs"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/cancel_selector"
+                    android:background="@drawable/select_weight_libs_selector"
                     android:clickable="true"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:text="Libs"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/text_20"
-                    android:textStyle="bold" />
+                    android:padding="10dp" />
 
-                <TextView
-                    android:id="@+id/tvKg"
+                <ImageView
+                    android:id="@+id/ivKg"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:background="#393738"
+                    android:background="@drawable/select_weight_kg_selector"
                     android:clickable="true"
                     android:gravity="center"
-                    android:padding="10dp"
-                    android:text="Kg"
-                    android:textColor="@android:color/white"
-                    android:textSize="@dimen/text_20"
-                    android:textStyle="bold" />
+                    android:padding="10dp" />
+
             </LinearLayout>
 
             <TextView
                 android:id="@+id/tvTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="15dp"
                 android:padding="10dp"
+                android:gravity="center"
                 android:text="Select Weight"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/text_22"
@@ -69,14 +64,13 @@
 
         <TextView
             android:id="@+id/tvMessage"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/rlHead"
-            android:layout_marginLeft="20dp"
             android:layout_marginTop="15dp"
+            android:text="Handles must be fully released when selecting weight"
             android:textColor="@android:color/white"
-            android:textSize="@dimen/text_20"
-            android:text="Handles must be fully released when selecting weight" />
+            android:textSize="@dimen/text_20" />
 
         <Button
             android:id="@+id/btContinue"
@@ -86,8 +80,8 @@
             android:layout_alignParentRight="true"
             android:layout_marginBottom="20dp"
             android:layout_marginRight="50dp"
-            android:padding="8dp"
-            android:text="Continue" />
+            android:background="@drawable/select_weight_continue_selector"
+            android:padding="8dp" />
 
         <GridView
             android:id="@+id/gridView"
@@ -99,9 +93,8 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:horizontalSpacing="20dp"
-            android:verticalSpacing="20dp"
-            android:numColumns="4" >
-        </GridView>
+            android:numColumns="4"
+            android:verticalSpacing="20dp"></GridView>
     </RelativeLayout>
 
 </FrameLayout>

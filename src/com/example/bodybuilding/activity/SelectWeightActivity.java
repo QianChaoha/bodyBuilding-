@@ -45,6 +45,8 @@ public class SelectWeightActivity extends BaseActivity {
 		list.add(50);
 		list.add(60);
 		list.add(70);
+		list.add(null);
+		list.add(null);
 		mGridView.setAdapter(new SelectWeightAdapter(mContext, list));
 	}
 
