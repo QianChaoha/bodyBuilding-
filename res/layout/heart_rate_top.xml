@@ -7,6 +7,7 @@
     android:orientation="horizontal">
 
     <LinearLayout
+        android:id="@+id/llGoal"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
@@ -90,6 +91,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/llBikeWorkout"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
@@ -149,6 +151,7 @@
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/llUser"
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_margin="10dp"
