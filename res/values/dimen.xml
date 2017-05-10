@@ -6,5 +6,11 @@
     <dimen name="text_24">24sp</dimen>
     <dimen name="text_26">26sp</dimen>
     <dimen name="text_28">28sp</dimen>
-    
+    <dimen name="text_30">30sp</dimen>
+    <dimen name="text_32">32sp</dimen>
+    <dimen name="text_34">34sp</dimen>
+    <dimen name="text_36">36sp</dimen>
+    <dimen name="text_38">38sp</dimen>
+    <dimen name="text_40">40sp</dimen>
+
 </resources>
