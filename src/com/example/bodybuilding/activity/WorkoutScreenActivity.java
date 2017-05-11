@@ -1,5 +1,6 @@
 package com.example.bodybuilding.activity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
 import android.graphics.drawable.Drawable;
@@ -114,6 +115,7 @@ private LinearLayout mLlColor;
             public void onClick(View v) {
                 if (mAnim != null && mAnim.isRunning()) {
                     mAnim.stop();
+
                 }
             }
         });
