@@ -16,6 +16,8 @@ import android.widget.TextView;
 
 import com.example.bodybuilding.R;
 import com.example.bodybuilding.base.BaseActivity;
+import com.example.bodybuilding.interfaces.DialogCallback;
+import com.example.bodybuilding.view.WorkoutSummaryDialog;
 
 /**
  * Created by cqian on 2017/5/11.
@@ -115,7 +117,13 @@ private LinearLayout mLlColor;
             public void onClick(View v) {
                 if (mAnim != null && mAnim.isRunning()) {
                     mAnim.stop();
-
+                    WorkoutSummaryDialog dialog=new WorkoutSummaryDialog(mContext, new DialogCallback() {
+						
+						@Override
+						public void click(View view) {
+							
+						}
+					});
                 }
             }
         });

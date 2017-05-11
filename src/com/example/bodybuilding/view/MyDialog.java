@@ -13,11 +13,11 @@ import android.view.WindowManager;
  * @author qianchao
  */
 public class MyDialog extends Dialog {
-	private static int default_width = 140; // 默认宽度
-	private static int default_height = 120;// 默认高度
+//	private static int default_width = 140; // 默认宽度
+//	private static int default_height = 120;// 默认高度
 
 	public MyDialog(Context context, View layout, int style) {
-		this(context, default_width, default_height, layout, style);
+		this(context, 0, 0, layout, style);
 	}
 
 	public MyDialog(Context context, int width, int height, View layout, int style) {
@@ -26,6 +26,10 @@ public class MyDialog extends Dialog {
 		Window window = getWindow();
 		WindowManager.LayoutParams params = window.getAttributes();
 		params.gravity = Gravity.CENTER;
+		if (width!=0 && height!=0) {
+			params.width=width;
+			params.height=height;
+		}
 		window.setAttributes(params);
 	}
 
