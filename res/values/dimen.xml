@@ -12,5 +12,11 @@
     <dimen name="text_36">36sp</dimen>
     <dimen name="text_38">38sp</dimen>
     <dimen name="text_40">40sp</dimen>
+    <dimen name="text_60">60sp</dimen>
+    <dimen name="text_80">80sp</dimen>
+    <dimen name="text_100">100sp</dimen>
+    <dimen name="text_120">120sp</dimen>
+    <dimen name="text_140">140sp</dimen>
+    <dimen name="text_160">160sp</dimen>
 
 </resources>
