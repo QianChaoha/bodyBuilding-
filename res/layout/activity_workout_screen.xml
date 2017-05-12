@@ -162,9 +162,10 @@
 
                     <ImageView
                         android:id="@+id/ivPausePlay"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="right"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="right|center_vertical"
                         android:background="@drawable/workout_screen_end_selector" />
                 </FrameLayout>
 
@@ -175,9 +176,10 @@
 
                     <ImageView
                         android:id="@+id/ivStartPlay"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="left"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:scaleType="fitXY"
+                        android:layout_gravity="left|center_vertical"
                         android:background="@drawable/workout_screen_start_selector" />
                 </FrameLayout>
             </LinearLayout>
@@ -462,7 +464,6 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_gravity="center"
                             android:orientation="vertical">
 
                             <TextView
@@ -470,6 +471,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="TOTAL COUNT"
+                                android:layout_gravity="center_horizontal"
                                 android:textColor="@android:color/white"
                                 android:textSize="@dimen/text_26" />
 
@@ -478,6 +480,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_below="@id/tvTotalCount"
                                 android:text="239"
+                                android:layout_gravity="center_horizontal"
                                 android:textColor="@android:color/white"
                                 android:textSize="@dimen/text_60"
                                 android:textStyle="bold" />
@@ -598,8 +601,8 @@
         android:id="@+id/rlStart"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#33000000"
-        android:visibility="gone">
+        android:background="#dd000000"
+        >
 
         <TextView
             android:id="@+id/tvStart"

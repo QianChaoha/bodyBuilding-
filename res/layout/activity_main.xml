@@ -56,7 +56,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv5"
-                android:layout_marginTop="-82dp"
+                android:layout_marginTop="-95dp"
                 android:layout_marginLeft="16dp"
                 android:background="@drawable/main_i_state_selector"
                 android:clickable="true" />
@@ -68,7 +68,7 @@
             android:layout_height="wrap_content"
             android:layout_above="@id/ivQuickStart"
             android:layout_centerHorizontal="true"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="70dp"
             android:layout_toRightOf="@id/middleVertical">
 
             <ImageView
@@ -82,8 +82,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/iv4"
-                android:layout_marginTop="-72dp"
-                android:layout_marginLeft="18dp"
+                android:layout_marginTop="-75dp"
+                android:layout_marginLeft="22dp"
                 android:background="@drawable/main_i_state_selector"
                 android:clickable="true" />
         </RelativeLayout>
@@ -120,7 +120,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@id/ivQuickStart"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="70dp"
             android:layout_toLeftOf="@id/middleVertical">
 
             <ImageView
@@ -136,8 +136,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_below="@id/iv2"
-                android:layout_marginRight="18dp"
-                android:layout_marginTop="-72dp"
+                android:layout_marginRight="22dp"
+                android:layout_marginTop="-75dp"
                 android:background="@drawable/main_i_state_selector"
                 android:clickable="true" />
         </RelativeLayout>
@@ -165,7 +165,7 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@id/iv1"
                 android:layout_marginRight="16dp"
-                android:layout_marginTop="-82dp"
+                android:layout_marginTop="-95dp"
                 android:background="@drawable/main_i_state_selector"
                 android:clickable="true" />
 

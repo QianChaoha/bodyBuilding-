@@ -3,8 +3,8 @@ package com.example.bodybuilding.activity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.AnimationDrawable;
-import android.graphics.drawable.Drawable;
 import android.util.TypedValue;
+import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.animation.Animation;
@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.bodybuilding.R;
 import com.example.bodybuilding.base.BaseActivity;
@@ -27,37 +28,42 @@ public class WorkoutScreenActivity extends BaseActivity {
     private RelativeLayout mRlStart;
     private ImageView mIvAnim, mIvPausePlay, mIvStartPlay;
     private AnimationDrawable mAnim;
-private LinearLayout mLlColor;
+    private LinearLayout mLlColor;
+    Toast mToast;
+
     @Override
     protected void initView() {
+        mToast = Toast.makeText(getApplicationContext(), "", Toast.LENGTH_LONG);
         mTvStart = getView(R.id.tvStart);
         mIvPausePlay = getView(R.id.ivPausePlay);
         mIvStartPlay = getView(R.id.ivStartPlay);
         mRlStart = getView(R.id.rlStart);
+        mRlStart.setVisibility(View.VISIBLE);
         mLlColor = getView(R.id.llColor);
         mIvAnim = getView(R.id.ivAnim);
 
-
+        mIvPausePlay.setClickable(false);
+        mIvStartPlay.setClickable(false);
         for (int i = 0; i < 20; i++) {
-            LinearLayout linearLayout=new LinearLayout(mContext);
+            LinearLayout linearLayout = new LinearLayout(mContext);
             linearLayout.setOrientation(LinearLayout.HORIZONTAL);
-            LinearLayout.LayoutParams layoutParams=new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,0);
-            layoutParams.weight=1;
+            LinearLayout.LayoutParams layoutParams = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 0);
+            layoutParams.weight = 1;
             for (int j = 0; j < 30; j++) {
-                TextView textView=new TextView(mContext);
-                if (i<3){
+                TextView textView = new TextView(mContext);
+                if (i < 3) {
                     textView.setBackgroundColor(Color.RED);
-                }else if (i<7){
+                } else if (i < 7) {
                     textView.setBackgroundColor(Color.YELLOW);
-                }else {
+                } else {
                     textView.setBackgroundColor(Color.GREEN);
                 }
-                LinearLayout.LayoutParams layoutParams1=new LinearLayout.LayoutParams(0,ViewGroup.LayoutParams.MATCH_PARENT);
-                layoutParams1.weight=1;
-                layoutParams1.setMargins(1,1,1,1);
-                linearLayout.addView(textView,layoutParams1);
+                LinearLayout.LayoutParams layoutParams1 = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.MATCH_PARENT);
+                layoutParams1.weight = 1;
+                layoutParams1.setMargins(1, 1, 1, 1);
+                linearLayout.addView(textView, layoutParams1);
             }
-            mLlColor.addView(linearLayout,layoutParams);
+            mLlColor.addView(linearLayout, layoutParams);
         }
 
 
@@ -76,7 +82,7 @@ private LinearLayout mLlColor;
             public void onAnimationEnd(Animation animation) {
                 try {
                     int temp = Integer.valueOf(mTvStart.getText().toString());
-                    if (temp > 0) {
+                    if (temp > 1) {
                         temp--;
                         mTvStart.setText(temp + "");
                         mTvStart.startAnimation(scaleAnimation);
@@ -104,6 +110,10 @@ private LinearLayout mLlColor;
             @Override
             public void onAnimationEnd(Animation animation) {
                 mRlStart.setVisibility(View.GONE);
+                mIvAnim.setImageDrawable(mAnim);
+                mAnim.start();
+                mIvPausePlay.setClickable(true);
+                mIvStartPlay.setClickable(true);
             }
 
             @Override
@@ -117,13 +127,24 @@ private LinearLayout mLlColor;
             public void onClick(View v) {
                 if (mAnim != null && mAnim.isRunning()) {
                     mAnim.stop();
-                    WorkoutSummaryDialog dialog=new WorkoutSummaryDialog(mContext, new DialogCallback() {
-						
-						@Override
-						public void click(View view) {
-							
-						}
-					});
+                    mIvPausePlay.setBackgroundResource(R.drawable.workout_screen_pause_selector);
+
+
+                    mToast.setGravity(Gravity.CENTER, 0, 0);
+
+                    View view = View.inflate(mContext, R.layout.work_screen_toast, null);
+                    mToast.setView(view);
+                    mToast.show();
+
+                } else {
+                    mToast.cancel();
+                    WorkoutSummaryDialog dialog = new WorkoutSummaryDialog(mContext, new DialogCallback() {
+
+                        @Override
+                        public void click(View view) {
+                            startActivity(new Intent(mContext, MainActivity.class));
+                        }
+                    });
                 }
             }
         });
@@ -132,6 +153,7 @@ private LinearLayout mLlColor;
             @Override
             public void onClick(View v) {
                 if (mAnim != null && !mAnim.isRunning()) {
+                    mIvPausePlay.setBackgroundResource(R.drawable.workout_screen_end_selector);
                     mAnim.start();
                 }
             }
@@ -154,8 +176,6 @@ private LinearLayout mLlColor;
 //            anim.addFrame(getResources().getDrawable(R.drawable.k_countdown_middle_img_triceps), 200);
         }
         mAnim.setOneShot(false);
-        mIvAnim.setImageDrawable(mAnim);
-        mAnim.start();
 
     }
 
