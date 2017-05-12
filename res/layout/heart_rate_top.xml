@@ -124,30 +124,33 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
             android:background="@drawable/i_bar_manual" />
 
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/tvManual"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
+                android:layout_marginLeft="20dp"
                 android:text="Manual"
                 android:textColor="@android:color/white"
                 android:textSize="@dimen/text_20" />
 
             <TextView
-                android:id="@+id/tvManual"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:textColor="@android:color/white"
-                android:textSize="@dimen/text_24" />
-        </LinearLayout>
+                android:layout_marginRight="20dp"
+                android:layout_alignParentRight="true"
+                android:textColor="#aaffffff"
+                android:text="Difficulty Level 01"
+                android:textSize="@dimen/text_18" />
+        </RelativeLayout>
     </LinearLayout>
 
     <LinearLayout

@@ -43,13 +43,13 @@
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:textColor">#666262</item>
-        <item name="android:textSize">@dimen/text_18</item>
+        <item name="android:textSize">@dimen/text_22</item>
         <item name="android:singleLine">true</item>
     </style>
 
     <style name="main_iv_bottom">
-        <item name="android:layout_width">15dp</item>
-        <item name="android:layout_height">10dp</item>
+        <item name="android:layout_width">30dp</item>
+        <item name="android:layout_height">20dp</item>
         <item name="android:layout_gravity">center_vertical</item>
         <item name="android:gravity">center_vertical</item>
         <item name="android:layout_marginLeft">5dp</item>

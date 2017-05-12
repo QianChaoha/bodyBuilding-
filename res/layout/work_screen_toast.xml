@@ -29,8 +29,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:text="Touch END to complete workout or to resume"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
         android:textColor="@android:color/white"
         android:textSize="@dimen/text_28" />
 </LinearLayout>
