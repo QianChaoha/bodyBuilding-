@@ -209,7 +209,9 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <RelativeLayout style="@style/main_rl_borrom">
+        <RelativeLayout 
+            android:id="@+id/rlGettingStart"
+            style="@style/main_rl_borrom">
 
             <LinearLayout style="@style/main_ll_borrom">
 

@@ -7,8 +7,6 @@ import android.content.SharedPreferences;
 import android.os.Handler;
 import android.os.Message;
 import android.view.View;
-import android.view.ViewGroup.LayoutParams;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
@@ -49,7 +47,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     private int[] mInfoImgsB5 = new int[]{R.drawable.chest_press_img_25, R.drawable.pec_fly_img_24, R.drawable.triceps_ext_img_23,
             R.drawable.pullover_img_22, R.drawable.ab_crunch_img_21};
     private int[] mInfoImgsFs = new int[]{R.drawable.usb_img_8};
-    private RelativeLayout mRlEnglish;
+    private RelativeLayout mRlEnglish,mRlGettingStart;
     private Handler mHandle = new Handler() {
         @Override
         public void handleMessage(Message msg) {
@@ -96,9 +94,11 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mLinearLayout = getView(R.id.linearLayout);
         mTvSelectText = getView(R.id.tvSelectText);
         mRlEnglish = getView(R.id.rlEnglish);
+        mRlGettingStart = getView(R.id.rlGettingStart);
         ivQuickStart = getView(R.id.ivQuickStart);
         ivQuickStart.setOnClickListener(this);
         mRlEnglish.setOnClickListener(this);
+        mRlGettingStart.setOnClickListener(this);
         iv11 = getView(R.id.iv11);
         iv11.setOnClickListener(this);
         iv22 = getView(R.id.iv22);
@@ -300,6 +300,9 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
             case R.id.iv5:
                 startActivity(new Intent(mContext, SelectWeightActivity.class));
                 break;
+            case R.id.rlGettingStart:
+            	startActivity(new Intent(mContext, ClubSettingActivity.class));
+            	break;
         }
     }
 }

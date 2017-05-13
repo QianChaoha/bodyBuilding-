@@ -26,6 +26,7 @@
         <activity android:name="com.example.bodybuilding.activity.SelectWeightActivity"></activity>
         <activity android:name="com.example.bodybuilding.activity.CustomWorkoutActivity"></activity>
         <activity android:name="com.example.bodybuilding.activity.WorkoutScreenActivity"></activity>
+        <activity android:name="com.example.bodybuilding.activity.ClubSettingActivity"></activity>
         <activity
             android:name="com.example.bodybuilding.activity.HeartrateActivity"
             android:theme="@style/android:Theme.Light"></activity>

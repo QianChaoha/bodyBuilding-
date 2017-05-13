@@ -1,6 +1,284 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent" >
 
-</LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background_only"
+        android:orientation="vertical"
+        android:paddingBottom="50dp"
+        android:paddingLeft="200dp"
+        android:paddingRight="200dp"
+        android:paddingTop="50dp" >
+
+        <RelativeLayout
+            android:id="@+id/rlHead"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/ivDefault"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/club_setting_default_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="10dp" />
+
+                <ImageView
+                    android:id="@+id/ivCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/club_setting_cancel_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="10dp" />
+
+                <ImageView
+                    android:id="@+id/ivSave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/club_setting_save_selector"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:padding="10dp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="Club Setting"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/text_22"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:orientation="horizontal" >
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MAX.WORKOUT TIME"
+                        android:textColor="#60ACDE"
+                        android:textSize="@dimen/text_20" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/ivReduceWeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/i_control_sub_n" />
+
+                        <TextView
+                            android:id="@+id/tvBottmWeight"
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/i_workout_overlay"
+                            android:gravity="center"
+                            android:text="60:00"
+                            android:textColor="#FEFEFE"
+                            android:textSize="@dimen/text_24"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:id="@+id/ivAddWeight"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/i_control_add_n" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="MAX.PAUSE TIME"
+                        android:textColor="#60ACDE"
+                        android:textSize="@dimen/text_20" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="60dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/i_control_sub_n" />
+
+                        <TextView
+                            android:layout_width="150dp"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/i_workout_overlay"
+                            android:gravity="center"
+                            android:text="2:00"
+                            android:textColor="#FEFEFE"
+                            android:textSize="@dimen/text_24"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/i_control_add_n" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="CABLE KAYAK"
+                        android:textColor="#60ACDE"
+                        android:textSize="@dimen/text_20" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/f_sele_down_n"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="DISABLED"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_18" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="CSAFE"
+                        android:textColor="#60ACDE"
+                        android:textSize="@dimen/text_20" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/f_sele_down_n"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="CSAFE OFF"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/text_18" />
+                </LinearLayout>
+            </FrameLayout>
+
+            <View
+                android:layout_width="2px"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#323335" />
+
+            <FrameLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="vertical" >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="SUBTOTAL"
+                            android:textColor="#60ACDE"
+                            android:textSize="@dimen/text_20" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:text="RESET"
+                            android:textColor="#909195"
+                            android:textSize="@dimen/text_20" />
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2px"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:background="#323335" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginRight="50dp" >
+
+                        <TextView
+                            android:id="@+id/tvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Time(Hours)"
+                            android:textColor="#60ACDE"
+                            android:textSize="@dimen/text_20" />
+
+                        <ImageView
+                             android:id="@+id/ivTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:background="@drawable/club_setting_but_rotate_selector" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="88888888888"
+                            android:paddingLeft="10dp"
+                            android:textStyle="bold"
+                            android:layout_toRightOf="@id/tvTime"
+                            android:layout_toLeftOf="@id/ivTime"
+                            android:textColor="@android:color/white"
+                            android:textSize="@dimen/text_24" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
