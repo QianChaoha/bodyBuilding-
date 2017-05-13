@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <!--
         Base application theme, dependent on API level. This theme is replaced
@@ -103,6 +103,56 @@
         <item name="android:layout_height">2px</item>
         <item name="android:background">#2A2E31</item>
         <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginRight">10dp</item>
+    </style>
+    
+     
+     <style name="club_setting_left_tv" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#949899</item>
+        <item name="android:textSize">@dimen/text_20</item> 
+        <item name="android:minWidth">150dp</item>
+    </style>
+    
+     <style name="club_setting_right_iv" >
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_alignParentRight">true</item>
+        <item name="android:background">@drawable/club_setting_but_rotate_selector</item>
+    </style>
+     
+     <style name="club_setting_middle_tv" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingLeft">10dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:textSize">@dimen/text_24</item>
+    </style>
+    
+     <style name="club_setting_rl" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+    </style>
+     <style name="club_setting_ll" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginLeft">50dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:layout_marginRight">50dp</item>
+        <item name="android:orientation">horizontal</item>
+    </style>
+     <style name="club_setting_line" >
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2px</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:background">#323335</item>
         <item name="android:layout_marginRight">10dp</item>
     </style>
 </resources>
