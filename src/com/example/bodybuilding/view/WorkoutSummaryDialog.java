@@ -6,16 +6,10 @@ import android.view.Display;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.WindowManager;
-import android.widget.GridView;
 import android.widget.TextView;
 
 import com.example.bodybuilding.R;
-import com.example.bodybuilding.adapter.SelectLanguageAdapter;
-import com.example.bodybuilding.entity.SelectLanguageEntity;
 import com.example.bodybuilding.interfaces.DialogCallback;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Description: Company: guanghua

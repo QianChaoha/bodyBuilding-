@@ -7,14 +7,9 @@ import android.content.Context;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.GridView;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.LinearLayout.LayoutParams;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.example.bodybuilding.R;
-import com.example.bodybuilding.adapter.InfoDialogAdapter;
 import com.example.bodybuilding.adapter.SelectLanguageAdapter;
 import com.example.bodybuilding.entity.SelectLanguageEntity;
 import com.example.bodybuilding.interfaces.DialogCallback;

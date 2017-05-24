@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Intent;
-import android.media.Image;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -13,7 +12,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.bodybuilding.R;
-import com.example.bodybuilding.adapter.SelectLanguageAdapter;
 import com.example.bodybuilding.adapter.SelectWeightAdapter;
 import com.example.bodybuilding.base.BaseActivity;
 

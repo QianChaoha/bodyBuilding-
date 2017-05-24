@@ -1,22 +1,11 @@
 package com.example.bodybuilding.activity;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.os.Environment;
 import android.os.Handler;
 import android.os.Message;
-import android.text.TextUtils;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -85,87 +74,6 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
 	@Override
 	protected void initView() {
-		// ==================================================
-		mSharedPreferences = getSharedPreferences("config", MODE_PRIVATE);
-		mEditor = mSharedPreferences.edit();
-		boolean temp = mSharedPreferences.getBoolean("isFirst", true);
-		
-		File file = new File(Environment.getExternalStorageDirectory().getAbsolutePath() + "/Download");
-		if (file != null) {
-			if (!file.exists()) {
-				file.mkdirs();
-			}
-		}
-		File childFile = new File(file, "config.txt");
-		if (childFile != null) {
-			if (!childFile.exists()) {
-				try {
-					childFile.createNewFile();
-				} catch (IOException e) {
-					e.printStackTrace();
-				}
-			}
-		}
-		if (temp) {
-			FileReader fileReader=null;
-			BufferedReader reader=null;
-			BufferedWriter writer=null;
-			try {
-				 fileReader = new FileReader(childFile);
-				 reader = new BufferedReader(fileReader);
-				String line = reader.readLine();
-				//第一次启动
-				if (!TextUtils.isEmpty(line)) {
-					//之前有安装过
-					long time = Long.valueOf(line);
-					int dTime = (int) ((System.currentTimeMillis() - time) / (1000 * 60 * 60 * 24));
-					if (dTime > 6) {
-						finish();
-					}
-				}else {
-					//确实是第一次安装
-					writer=new BufferedWriter(new FileWriter(childFile));
-					writer.write(System.currentTimeMillis()+"");
-					writer.flush();
-				}
-			} catch (Exception e) {
-				e.printStackTrace();
-			}finally{
-				if (fileReader!=null) {
-					try {
-						fileReader.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-				if (reader!=null) {
-					try {
-						reader.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-				if (writer!=null) {
-					try {
-						writer.close();
-					} catch (IOException e) {
-						e.printStackTrace();
-					}
-				}
-			}
-		}
-
-		if (temp) {
-			mEditor.putBoolean("isFirst", false);
-			mEditor.putLong("time", System.currentTimeMillis()).commit();
-		} else {
-			long time = mSharedPreferences.getLong("time", System.currentTimeMillis());
-			int dTime = (int) ((System.currentTimeMillis() - time) / (1000 * 60 * 60 * 24));
-			if (dTime > 4) {
-				finish();
-			}
-		}
-		// ==================================================
 
 		mLinearLayout = getView(R.id.linearLayout);
 		mTvSelectText = getView(R.id.tvSelectText);

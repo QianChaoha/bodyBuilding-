@@ -25,12 +25,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.example.bodybuilding.activity.SelectWeightActivity"></activity>
-        <activity android:name="com.example.bodybuilding.activity.CustomWorkoutActivity"></activity>
-        <activity android:name="com.example.bodybuilding.activity.WorkoutScreenActivity"></activity>
-        <activity android:name="com.example.bodybuilding.activity.ClubSettingActivity"></activity>
+        <activity android:name=".activity.SelectWeightActivity"></activity>
+        <activity android:name=".activity.CustomWorkoutActivity"></activity>
+        <activity android:name=".activity.WorkoutScreenActivity"></activity>
+        <activity android:name=".activity.ClubSettingActivity"></activity>
         <activity
-            android:name="com.example.bodybuilding.activity.HeartrateActivity"
+            android:name=".activity.HeartrateActivity"
             android:theme="@style/android:Theme.Light"></activity>
         <receiver android:name=".receiver.BootReceiver"/>
     </application>
