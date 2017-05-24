@@ -217,76 +217,76 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 	public void onClick(View v) {
 		CommenDialog commenDialog;
 		switch (v.getId()) {
-		case R.id.iv11:
-			commenDialog = new CommenDialog(mContext, mInfoImgsCw, 6, new DialogCallback() {
-				@Override
-				public void click(View view) {
+			case R.id.iv11:
+				commenDialog = new CommenDialog(mContext, mInfoImgsCw, 6, new DialogCallback() {
+					@Override
+					public void click(View view) {
 
-				}
-			});
-			break;
-		case R.id.iv22:
-			commenDialog = new CommenDialog(mContext, mInfoImgs12r, 3, new DialogCallback() {
-				@Override
-				public void click(View view) {
+					}
+				});
+				break;
+			case R.id.iv22:
+				commenDialog = new CommenDialog(mContext, mInfoImgs12r, 3, new DialogCallback() {
+					@Override
+					public void click(View view) {
 
-				}
-			});
-			break;
-		case R.id.iv33:
-			commenDialog = new CommenDialog(mContext, mInfoImgsF5, 5, new DialogCallback() {
-				@Override
-				public void click(View view) {
+					}
+				});
+				break;
+			case R.id.iv33:
+				commenDialog = new CommenDialog(mContext, mInfoImgsF5, 5, new DialogCallback() {
+					@Override
+					public void click(View view) {
 
-				}
-			});
-			break;
-		case R.id.iv44:
-			commenDialog = new CommenDialog(mContext, mInfoImgsB5, 6, new DialogCallback() {
-				@Override
-				public void click(View view) {
+					}
+				});
+				break;
+			case R.id.iv44:
+				commenDialog = new CommenDialog(mContext, mInfoImgsB5, 6, new DialogCallback() {
+					@Override
+					public void click(View view) {
 
-				}
-			});
-			break;
-		case R.id.iv55:
-			commenDialog = new CommenDialog(mContext, mInfoImgsFs, 3, new DialogCallback() {
-				@Override
-				public void click(View view) {
+					}
+				});
+				break;
+			case R.id.iv55:
+				commenDialog = new CommenDialog(mContext, mInfoImgsFs, 3, new DialogCallback() {
+					@Override
+					public void click(View view) {
 
-				}
-			});
-			break;
-		case R.id.rlEnglish:
-			LanguageDialog languageDialog = new LanguageDialog(mContext, new DialogCallback() {
+					}
+				});
+				break;
+			case R.id.rlEnglish:
+				LanguageDialog languageDialog = new LanguageDialog(mContext, new DialogCallback() {
 
-				@Override
-				public void click(View view) {
+					@Override
+					public void click(View view) {
 
-				}
-			});
-			break;
-		case R.id.ivQuickStart:
-			startActivity(new Intent(mContext, SelectWeightActivity.class));
-			break;
-		case R.id.iv1:
-			startActivity(new Intent(mContext, SelectWeightActivity.class));
-			break;
-		case R.id.iv2:
-			startActivity(new Intent(mContext, SelectWeightActivity.class));
-			break;
-		case R.id.iv3:
-			startActivity(new Intent(mContext, SelectWeightActivity.class));
-			break;
-		case R.id.iv4:
-			startActivity(new Intent(mContext, SelectWeightActivity.class));
-			break;
-		case R.id.iv5:
-			startActivity(new Intent(mContext, SelectWeightActivity.class));
-			break;
-		case R.id.rlGettingStart:
-			startActivity(new Intent(mContext, ClubSettingActivity.class));
-			break;
+					}
+				});
+				break;
+			case R.id.ivQuickStart:
+				startActivity(new Intent(mContext, SelectWeightActivity.class));
+				break;
+			case R.id.iv1:
+				startActivity(new Intent(mContext, SelectWeightActivity.class));
+				break;
+			case R.id.iv2:
+				startActivity(new Intent(mContext, SelectWeightActivity.class));
+				break;
+			case R.id.iv3:
+				startActivity(new Intent(mContext, SelectWeightActivity.class));
+				break;
+			case R.id.iv4:
+				startActivity(new Intent(mContext, SelectWeightActivity.class));
+				break;
+			case R.id.iv5:
+				startActivity(new Intent(mContext, SelectWeightActivity.class));
+				break;
+			case R.id.rlGettingStart:
+				startActivity(new Intent(mContext, ClubSettingActivity.class));
+				break;
 		}
 	}
 }

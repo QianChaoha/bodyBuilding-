@@ -52,7 +52,6 @@
             android:textSize="@dimen/text_20" />
 
         <Button
-            android:id="@+id/button"
             android:layout_width="90dp"
             android:layout_height="30dp"
             android:layout_alignParentRight="true"

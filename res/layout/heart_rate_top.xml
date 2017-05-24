@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/llTop"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
@@ -49,7 +48,6 @@
                 android:textSize="@dimen/text_20" />
 
             <TextView
-                android:id="@+id/tvWorkoutTime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
@@ -134,7 +132,6 @@
             android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tvManual"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"

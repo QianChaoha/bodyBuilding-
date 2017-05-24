@@ -28,7 +28,6 @@
                 android:orientation="horizontal" >
 
                 <ImageView
-                    android:id="@+id/ivDefault"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/club_setting_default_selector"
@@ -37,7 +36,6 @@
                     android:padding="10dp" />
 
                 <ImageView
-                    android:id="@+id/ivCancel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/club_setting_cancel_selector"
@@ -46,7 +44,6 @@
                     android:padding="10dp" />
 
                 <ImageView
-                    android:id="@+id/ivSave"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/club_setting_save_selector"
